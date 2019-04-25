@@ -1,0 +1,1 @@
+var functionUrl = 'https://serverlessbootcamp-hro-translator.azurewebsites.net/api/ToGermanTranslator?code=oBwCJzQhxpSWtMwaTDVgFzTd8ALCemdve6ERhjWdno/tVxOeH0/m7w==';
