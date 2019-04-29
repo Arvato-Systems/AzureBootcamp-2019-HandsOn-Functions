@@ -19,9 +19,9 @@ Logon to the [Azure Portal](https://portal.azure.com) and navigate to the previo
 
 ## Storage Account
 Create a storage account and set the Account kind to **StorageV2 (general purpose v2)** and use **LRS** as Replication. 
-![Settings](images/staticWebsite.png "Settings")
+![Settings](images/storageacc.png "Settings")
 Next activate the static website hosting feature (currently in preview).
-![Settings Blade](images/storageacc.png "Settings Blade")
+![Settings Blade](images/staticWebsite.png "Settings Blade")
 
 Please enable the **Static website** feature and set the Indes and Error document to *index.html*. This demo will not use a dedicated error document. Hint: The endpoint field will be visible only after you click on the Enabled button.
 
@@ -30,11 +30,11 @@ The solution uses the services *Text Translation* and *Text Analytics*. Both of 
 
 Both can be create by clicking on add and entering "Text" as filter.
 
-![Create Cognitive Services](images/CognitiveServices.png "Create Cognitive Services")
+![Create Cognitive Services](images/CocnitiveServices.png "Create Cognitive Services")
 
 Create both services mentioned above and remember the keys.
 
-![Cognitive Services Keys](images/CognitiveServiceKey.png "Cognitive Services Keys")
+![Cognitive Services Keys](images/CocnitiveServiceKey.png "Cognitive Services Keys")
 
 The keys will be used later, to authenticate in order to use the services.
 
@@ -77,22 +77,20 @@ In case you want to know more (or create your own Function) the links will enabl
 
 # Upload Function
 
-## Clone the repository
-This step downloads all files from GitHub to a local folder on your machine. ```git clone https://github.com/ArvatoSystems/AzureBootcamp-2019-HandsOn-Functions.git``` will create a folder **HandsOn-Functions** in the current directory and download all files from the repository.
+## Get the Function data
+Download the files from ```https://github.com/ArvatoSystems/AzureBootcamp-2019-HandsOn-Functions.git``` and unzip this archive.
 
 Finally we can deploy our website and Function to see the magic happen.
 
-1. chdir into the subfolder **functions/TextTranslator**
+1. navigate into the subfolder **functions/TextTranslator**
 2. navigate to the function apps and create a function
+![Create a Function](images/HTTPFuntion.png "Create a Function")
 3. upload an overwrite the run.csx
 4. The newly deployed function has its own URL. We need it for the website to be able to leverage the function. So go to the function in your browser and copy the URL.
-
-    ![Copy Function URL](images/FunctionApp-FunctionUrl.png "Copy Function URL")
+    ![Copy Function URL](images/FunctionCode.png "Copy Function URL")
 5. Open the **Website** folder of the cloned repository with VSCode.
 6. Adjust the Function App URL in the **variables.js** files. Set the variable **functionUrl** to the value of your Function App.
 7. Navigate to the Storage account in your browser and click on the **$web** container.
-
-    ![Click $web](images/StorageAccount-BlobService.png)
 8. Upload **index.html**, **demo.min.css**, **demo.min.js** and **variables.js** from the websites folder. You can use drag&drop or the Upload button in the Portal.
 
 That's it. Get back to the Storage account in the browser to copy the URL from the *Static website* blade.
