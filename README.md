@@ -68,7 +68,7 @@ Go to the Platform features blade from where you can access the Application and 
 
    Otherwise the browser would query for data later on, but not show anthing of it and hide the error in the console.
 
-   Remove all existing entries and add one **ALLOWED ORIGINS** with the value "*" (just a star).
+   Remove all existing entries and add one **ALLOWED ORIGINS** with the value "*" (just a star) or add the URL to the CORS policies.
 
 ### Further Reading ###
 In case you want to know more (or create your own Function) the links will enable you to do so: 
